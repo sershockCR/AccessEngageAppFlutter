@@ -29,12 +29,12 @@ dependencies:
   cached_network_image: 3.1.0+1
   easy_debounce: 2.0.1
   equatable: 2.0.3
-  flutter_barcode_scanner: 2.0.0
   font_awesome_flutter: 10.1.0
   google_fonts: 2.2.0
   intl: 0.17.0
   json_path: 0.3.1
   page_transition: 2.0.4
+  permission_handler:
   shared_preferences: 2.0.11
   timeago: 3.1.0
   url_launcher: 6.0.15

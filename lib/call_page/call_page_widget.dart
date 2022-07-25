@@ -1,9 +1,9 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_web_view.dart';
+import '../custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CallPageWidget extends StatefulWidget {
@@ -20,19 +20,13 @@ class CallPageWidget extends StatefulWidget {
 
 class _CallPageWidgetState extends State<CallPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  var test = '';
 
   @override
   void initState() {
     super.initState();
     // On page load action.
     SchedulerBinding.instance?.addPostFrameCallback((_) async {
-      test = await FlutterBarcodeScanner.scanBarcode(
-        '#C62828', // scanning line color
-        'Cancel', // cancel button text
-        true, // whether to show the flash icon
-        ScanMode.QR,
-      );
+      await actions.getPermissions();
     });
   }
 
